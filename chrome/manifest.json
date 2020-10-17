@@ -12,6 +12,10 @@
     "background": {
       "scripts": ["background.js"]
     },
+    "content_scripts": [{
+      "matches": ["*://*.amazon.com/*"],
+      "js": ["jquery-3.3.1.js", "content.js"]
+    }],
     "browser_action": {
       "default_popup": "./popup.html"
     },
@@ -22,7 +26,9 @@
       "https://www.amazon.ca/*",
       "https://www.amazon.com/*",
       "storage",
-      "pageCapture"
+      "pageCapture",
+      "activeTab",
+      "declarativeContent"
     ],
     "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'"
   }

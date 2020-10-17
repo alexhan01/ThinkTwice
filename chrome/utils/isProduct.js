@@ -1,4 +1,4 @@
-export function isProduct() {
-    console.log("Hi!");
-    return;
-}
+// export function isProduct() {
+//     console.log("Hi!");
+//     return;
+// }
