@@ -6,7 +6,7 @@
 // first.id = "first";
 
 // const second = document.createElement('button');
-// second.innerText = "ur gay";
+// second.innerText = "ur amazing";
 // second.id = "second";
 
 // document.querySelector('body').appendChild(first);

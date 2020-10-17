@@ -22,8 +22,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 
 
-chrome.tabs.onActivated.addListener(tab => {
+chrome.tabs.onUpdated.addListener(tab => {
   chrome.tabs.get(tab.tabId, current_tab_info => {
+    console.log(tab.url)
     if(/^https:\/\/www\.amazon/.test(current_tab_info.url)){
       //chrome.tabs.insertCSS(null, {file: "styles.css"});
       chrome.tabs.executeScript(null, {file: "foreground.js"}, () => console.log("I injected"))
