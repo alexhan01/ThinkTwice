@@ -19,15 +19,15 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     return true;
 });
 
-chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-  chrome.declarativeContent.onPageChanged.addRules([{
-    conditions: [new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: {hostEquals: 'www.amazon.com'},
-    })
-  ],
-    actions: [new chrome.declarativeContent.ShowPageAction()]
-  }]);
-});
+// chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+//   chrome.declarativeContent.onPageChanged.addRules([{
+//     conditions: [new chrome.declarativeContent.PageStateMatcher({
+//       pageUrl: {hostEquals: 'www.amazon.com'},
+//     })
+//   ],
+//     actions: [new chrome.declarativeContent.ShowPageAction()]
+//   }]);
+// });
 
 // // Regex-pattern to check URLs against. 
 // // It matches URLs like: http[s]://[...]stackoverflow.com[...]

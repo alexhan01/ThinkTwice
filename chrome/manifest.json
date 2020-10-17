@@ -13,8 +13,8 @@
       "scripts": ["background.js"]
     },
     "content_scripts": [{
-      "matches": ["*://*.amazon.com/*"],
-      "js": ["jquery-3.3.1.js", "content.js"]
+      "matches": ["*://*.amazon.com/*" ],
+      "js": ["content.js"]
     }],
     "browser_action": {
       "default_popup": "./popup.html"
