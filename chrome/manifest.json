@@ -13,7 +13,7 @@
       "scripts": ["background.js"]
     },
     "content_scripts": [{
-      "matches": ["*://*.amazon.com/*" ],
+      "matches": ["<all_urls>"],
       "js": ["content.js"]
     }],
     "browser_action": {
