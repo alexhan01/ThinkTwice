@@ -28,16 +28,16 @@ chrome.storage.sync.get(["purchases"], function(result) {
 
 document.addEventListener('click', function(e) {
     var reason = "";
-    if (e.target.matches('#add-to-cart-button') || e.target.matches('#buy-now-button')) {
+    if (e.target.matches('#productTitle') || e.target.matches('#buy-now-button')) {
         reason = prompt('Why are you purchasing this product?');
     }
     console.log(reason)
-    if (reason) {
+    if (reason != "") {
         var currPurchases = []
         chrome.storage.sync.get(["purchases"], function(result) {
-            console.log(result)
+            // console.log(result)
             if (result != null){
-                currPurchases = result
+                currPurchases = result.purchases
             } else {
                 currPurchases = []
             }
@@ -46,13 +46,16 @@ document.addEventListener('click', function(e) {
             item: document.getElementById("productTitle").innerHTML,
             reason: reason
         }
+        // console.log("Before Push")
+        // console.log(currPurchases)
         currPurchases.push(onePurchase)
+        // console.log("After Push")
+        // console.log(currPurchases)
         chrome.storage.sync.set({"purchases": currPurchases}, function() {
             console.log('Value is set to ' + currPurchases);
           });
     }
     reason = "";
-
  
     // return retval;
     // var dummyUserId = "Hasan";
