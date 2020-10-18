@@ -21,7 +21,8 @@
       "https://www.google.ca/*",
       "https://www.amazon.ca/*",
       "https://www.amazon.com/*",
-      "storage"
+      "storage",
+      "pageCapture"
     ],
     "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'"
   }

@@ -1,3 +1,5 @@
+// import { isProduct } from './utils/isProduct.js';
+
 let user_signed_in = false;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
@@ -35,7 +37,7 @@ chrome.tabs.onActivated.addListener(tab => {
   // while (true) {
     chrome.tabs.get(tab.tabId, current_tab_info => {
       if (current_tab_info.url.includes("amazon")) {
-
+        isProduct();
         // console.log("New Tab");
         // console.log(chrome.windows.location);
       }
@@ -57,6 +59,7 @@ chrome.tabs.onActivated.addListener(tab => {
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   // console.log(tab.url);
         if (tab.url.includes("amazon")) {
+          isProduct(tabId);
         // console.log("Updated");
         // console.log(chrome.windows.location);
       }
@@ -70,3 +73,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 //   }
 // })
 
+function isProduct(tabId) {
+  // var text = document.getElementById("productTitle").innerText;
+  // chrome.pageCapture.saveAsMHTML(tabId);
+  console.log(chrome.pageCapture.saveAsMHTML(tabId, () => null)
+    );
+  // console.log(document.URL);
+  // if (document.querySelector("#productTitle")) {
+  //   // console.log("Hi");
+  // }
+}
