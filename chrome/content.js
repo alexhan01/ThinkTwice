@@ -32,7 +32,7 @@ chrome.storage.sync.get(["purchases"], function(result) {
 
 document.addEventListener('click', function(e) {
     var reason = "";
-    if (e.target.matches('#productTitle') || e.target.matches('#buy-now-button')) {
+    if (e.target.matches('#add-to-cart-button') || e.target.matches('#buy-now-button')) {
         reason = prompt('Why are you purchasing this product?');
     }
     console.log(reason)
@@ -62,8 +62,8 @@ document.addEventListener('click', function(e) {
             // fs.writeFileSync(path.resolve(dirname__, 'data.json'), JSON.stringify(currPurchases));
             // console.log("Saved to Json")
             // save to json
-            var url = chrome.runtime.getURL("data/data.json")
-            console.log(chrome.runtime.getURL("data/data.json"))
+            // var url = chrome.runtime.getURL("data/data.json")
+            // console.log(chrome.runtime.getURL("data/data.json"))
           });
     }
     reason = "";
