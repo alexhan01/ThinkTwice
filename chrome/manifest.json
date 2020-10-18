@@ -10,7 +10,8 @@
         "128": "images/get_started128.png"
       },
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["background.js"],
+      "persistent": false
     },
     "content_scripts": [{
       "matches": ["*://*.amazon.com/*" ],
