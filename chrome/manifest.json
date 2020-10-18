@@ -25,6 +25,9 @@
     "browser_action": {
       "default_title": "Think Twice about your Purchass"
     },
+    "web_accessible_resources": [
+      "data/data.json"
+    ],
     "permissions": [
       "tabs",
       "https://www.google.com/*",
