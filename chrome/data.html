@@ -2,55 +2,104 @@
     <head>
     </head>
     <style>
+        .logoContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 10px;
+            /* background: lightgoldenrodyellow; */
+        }
+        .logoPicture {
+            width: 50px;
+            height: auto;
+            /* background: cornsilk; */
+            padding: 20px;
+        }
+        .dashboardHead {
+            font-family: 'Courier New';
+            /* margin: 5px; */
+            /* padding-top: 10px; */
+            color: gray;
+            font-size: 1rem;
+            vertical-align: middle;
+            line-height: 50px;
+            /* background-color: honeydew; */
+        }
+        .welcome {
+            margin-left: 50px;
+            margin-bottom: 0;
+            padding-left: 10px;
+            font-family: 'Courier New';
+            font-size: 1rem;
+            /* background: lightgoldenrodyellow; */
+        }
         .mainContainer {
-            background-color: teal;
+            /* background-color: teal; */
             display: flex;
             flex-direction: row;
             justify-content: center;
+            font-family: 'Courier New';
         }
         .productTitle {
             margin: 10px;
             padding: 10px;
-            background: lightcoral;
+            /* background: lightcoral; */
             width: 30rem;
         }
         .productTitleHead {
-            background: lightgoldenrodyellow;
+            /* background: lightgoldenrodyellow; */
+            padding: 5px;
+
         }
         .productTitleBody {
-            background: lightskyblue;
+            /* background: lightskyblue; */
+            padding: 5px;
+
+        }
+        .productTitleBodyEntry {
+            padding: 10px;
+            background-color: darkgrey;
+            margin-top: 5px;
         }
         .purchaseReason {
             margin: 10px;
             padding: 10px;
-            background: lightcoral;
+            /* background: lightcoral; */
             width: 30rem;
         }
         .purchaseReasonHead {
-            background: lightgoldenrodyellow;
+            /* background: lightgoldenrodyellow; */
+            padding: 5px;
         }
         .purchaseReasonBody {
-            background: lightskyblue;
+            /* background: lightskyblue; */
+            padding: 5px;
+        }
+        .purchaseReasonBodyEntry {
+            padding: 10px;
+            background-color: darkgrey;
+            margin-top: 5px;
         }
     </style>
     <body>
-        <!--Insert Logo Here-->
-        <h1>Hello, Hasan Altaf</h1>
+        <div class="logoContainer">
+            <img src="images/logo.png" alt="Think Twice Logo" class="logoPicture">
+            <p class="dashboardHead"><strong>Think Twice Dashboard</strong></p>
+        </div>
+        <div class="welcome">
+            <h1>Hello, <strong>Hasan Altaf</strong></h1>
+        </div>
         <div class="mainContainer">
             <div class="productTitle">
                 <div class="productTitleHead">
                     <h2>Products Purchased</h2>
                 </div>
                 <div class="productTitleBody">
-                    <p>
-                        Test
-                    </p>
-                    <p>
-                        Test2
-                    </p>
-                    <p>
-                        Test3
-                    </p>
+                    <p class="productTitleBodyEntry">Test1</p>
+                    <p class="productTitleBodyEntry">Test2</p>
+                    <p class="productTitleBodyEntry">Test3</p>
+                    <p class="productTitleBodyEntry">Test4</p>
+                    <p class="productTitleBodyEntry">Test5</p>
                 </div>
             </div>
             <div class="purchaseReason">
@@ -58,9 +107,11 @@
                     <h2>Purchase Reasons</h2>
                 </div>
                 <div class="purchaseReasonBody">
-                    <p>Test1</p>
-                    <p>Test2</p>
-                    <p>Test3</p>
+                    <p class="purchaseReasonBodyEntry">Test1</p>
+                    <p class="purchaseReasonBodyEntry">Test2</p>
+                    <p class="purchaseReasonBodyEntry">Test3</p>
+                    <p class="purchaseReasonBodyEntry">Test4</p>
+                    <p class="purchaseReasonBodyEntry">Test5</p>
                 </div>
             </div>
         </div>

@@ -3,34 +3,47 @@
       <title>Think Twice</title>
       <script type="text/javascript" src="oauth.js"></script>
       <style>
-        button {
-          padding: 10px;
-          background-color: #3d517e;
-          display: inline-block;
+        .filler {
+          flex-grow: 2;
+        }
+        .buttonContainer {
+          /* background-color: darkgrey; */
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .buttonColumn {
+          /* background: darkkhaki; */
+          flex-grow: 1;
+          /* justify-content: ; */
         }
         a {
-          padding: 10px;
+          /* margin-top: 0%; */
+          height: auto;
+          width: auto;
+          padding: 30px;
           background-color: #3d517e;
           /* display: inline-block; */
           text-decoration: none;
-          text-align: center;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          /* text-align: center; */
+          font-family: 'Courier New';
           color: white;
-          font-size: 10px;
+          font-size: 20px;
           position: absolute;
           /* width: 100%;
           height: 100%; */
         }
-        .container {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          justify-content: center;
-        }
       </style>
     </head>
     <body>
-      <a href="/data.html">See Your Data</a>
-      <div id="dataDiv"></div>
+      <!-- <div class="buttonContainer">
+        <div class="filler"></div>
+        <div class="buttonColumn"> -->
+          <a href="/data.html" class="buttonColumn">See Your Data</a>
+        <!-- </div>
+        <div class="filler"></div>
+      </div> -->
     </body>
   </html>
