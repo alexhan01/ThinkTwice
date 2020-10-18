@@ -3,6 +3,11 @@
     "version": "1.0",
     "description": "Financial literacy through reflection",
     "manifest_version": 2,
+    "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw/HfSBCEFJy2/ksuRFlXHj/8weS3ayU7AA9kwKkX9QO9zuwo08WH9ZDwDsVRWlxC47XmcKjYjJoUAYymXM+5LFGsmJH09t5LBIUoCwZ9VjrAwOBFr4KMu6ZIZhPXNaJc1MbxJJ0Fl3YcSmacR5eMQXSSz/pkxF5K3mkHmfWSguhcpNsTlsKipNA90md8tuaYj3LRkBEIBBeQw5abu9W3Kl8qX/ssE4D3RHT7Wl/zxISNXDZTu6v1AGhszTzAugrC9gHMnOMyc7XBUDZchHUP7PbDMPAzKdyIpNvy9l1VVCEUzPlXr38RMUpfjCxLIDDxHkj44qzUtCndqgAv0MyTgwIDAQAB",
+    "oauth2": {
+      "client_id": "841766129387-ah1vvr9as09f0edhlv51r7nfo0ttk36q.apps.googleusercontent.com",
+      "scopes":[""]
+    },
     "icons": {
         "16": "images/get_started16.png",
         "32": "images/get_started32.png",
@@ -18,7 +23,7 @@
       "js": ["content.js"]
     }],
     "browser_action": {
-      "default_popup": "./popup.html"
+      "default_title": "Think Twice about your Purchass"
     },
     "permissions": [
       "tabs",
@@ -29,7 +34,7 @@
       "storage",
       "pageCapture",
       "activeTab",
-      "declarativeContent"
-    ],
-    "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'"
+      "declarativeContent",
+      "identity"
+    ]
   }

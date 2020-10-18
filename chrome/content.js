@@ -20,26 +20,45 @@ if(document.getElementById("productTitle")){
     console.log(document.getElementById("productTitle").innerHTML)
     console.log(document.getElementById("price_inside_buybox").innerHTML)
 }
+chrome.storage.sync.get(["purchases"], function(result) {
+    console.log(result)
+  });
 
-var retval = null;
+
 
 document.addEventListener('click', function(e) {
     var reason = "";
     if (e.target.matches('#add-to-cart-button') || e.target.matches('#buy-now-button')) {
         reason = prompt('Why are you purchasing this product?');
     }
+    console.log(reason)
     if (reason) {
-        retval = {
-            title: document.getElementById("productTitle").innerHTML,
-            price: document.getElementById("price_inside_buybox").innerHTML,
-            reason: reason 
+        var currPurchases = []
+        chrome.storage.sync.get(["purchases"], function(result) {
+            console.log(result)
+            if (result != null){
+                currPurchases = result
+            } else {
+                currPurchases = []
+            }
+          });
+          onePurchase = {
+            item: document.getElementById("productTitle").innerHTML,
+            reason: reason
         }
+        currPurchases.push(onePurchase)
+        chrome.storage.sync.set({"purchases": currPurchases}, function() {
+            console.log('Value is set to ' + currPurchases);
+          });
     }
     reason = "";
+
+ 
     // return retval;
     // var dummyUserId = "Hasan";
     // writeUserData(dummyUserId, retval);
 });
+
 
 // function writeUserData(userId, retval) {
 //     if (retval != null) {
@@ -51,7 +70,6 @@ document.addEventListener('click', function(e) {
 //     }
 // }
 
-console.log(retval);
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     // If the received message has the expected format...
